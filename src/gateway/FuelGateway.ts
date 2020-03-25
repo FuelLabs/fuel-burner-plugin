@@ -1,5 +1,5 @@
 export default class FuelGateway {
-  private wallets: { [string: name]: any } = {};
+  private wallets: { [name: string]: any } = {};
 
   constructor() {}
 
@@ -11,7 +11,11 @@ export default class FuelGateway {
     return ['3-fuel', '5-fuel'];
   }
 
-  send(network, payload) {
+  getWallet(network: string) {
+    return null;
+  }
+
+  send(network: string, payload: any) {
     const _network = network.substr(0, network.indexOf('-'));
     const wallet = this.getWallet(_network);
 
@@ -19,7 +23,7 @@ export default class FuelGateway {
       case 'transfer':
         break;
       case 'balance':
-        wallet
+        break;
       default:
         throw new Error(`[FuelGateway] Invalid action ${payload.action}`);
     }

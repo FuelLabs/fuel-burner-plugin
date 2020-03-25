@@ -1,10 +1,17 @@
 {
   "name": "fuel-burner-wallet",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "author": "David Mihal <david@dmihal.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {
+    "@burner-wallet/assets": "^1.1.5",
     "fuel-core": "^0.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
   }
 }

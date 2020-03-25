@@ -1,15 +1,19 @@
-export default class FuelAsset {
+import { Asset } from '@burner-wallet/assets';
+
+export default class FuelAsset extends Asset {
+  private address: string;
+
   constructor({
     address='0x0000000000000000000000000000000000000000',
-    pollInterval=POLL_INTERVAL,
     ...params
   }) {
+    // @ts-ignore
     super({ ...params, type: 'fuel-asset' });
     this.address = address;
-    this._pollInterval = pollInterval;
   }
 
-  async _send({ from, to, value }) {
+  async _send({ from, to, value }: any) {
+    // @ts-ignore
     await this.core.handleRequest(`${this.network}-fuel`, {
       action: 'transfer',
       address: this.address,
@@ -20,6 +24,7 @@ export default class FuelAsset {
   }
 
   async getBalance(account: string) {
+    // @ts-ignore
     return await this.core.handleRequest(`${this.network}-fuel`, {
       action: 'balance',
       address: this.address,
