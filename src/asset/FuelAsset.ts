@@ -12,15 +12,36 @@ export default class FuelAsset extends Asset {
     this.address = address;
   }
 
+  async getTx(txHash: string) { 
+    // @ts-ignore
+    const result = await this.core.handleRequest(`${this.network}-fuel`, {
+      action: 'transaction',
+      transactionHash: txHash,
+    });
+
+    return { 
+      asset: this.id, 
+      assetName: this.name, 
+      from: result.from, 
+      to: result.to, 
+      value: result.value, 
+      displayValue: this.getDisplayValue(result.value), 
+      message: null, 
+      timestamp: 0,
+    };
+  } 
+
   async _send({ from, to, value }: any) {
     // @ts-ignore
-    await this.core.handleRequest(`${this.network}-fuel`, {
+    const result = await this.core.handleRequest(`${this.network}-fuel`, {
       action: 'transfer',
       address: this.address,
       from,
       to,
       value,
     });
+
+    return result;
   }
 
   startWatchingAddress() {

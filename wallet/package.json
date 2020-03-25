@@ -1,6 +1,6 @@
 {
-  "name": "sample-burner-wallet",
-  "description": "Sample repo for building a wallet using Burner Wallet 2",
+  "name": "fuel-test-wallet",
+  "description": "Test wallet for the fuel modules",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
