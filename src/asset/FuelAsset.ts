@@ -23,11 +23,14 @@ export default class FuelAsset extends Asset {
     });
   }
 
+  startWatchingAddress() {
+  }
+
   async getBalance(account: string) {
     // @ts-ignore
     return await this.core.handleRequest(`${this.network}-fuel`, {
       action: 'balance',
-      address: this.address,
+      address: this.address, // this is the token
       account,
     });
   }

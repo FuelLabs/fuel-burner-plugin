@@ -19,8 +19,8 @@
     "typescript": "3.5.1"
   },
   "scripts": {
-    "start": "yarn link \"fuel-burner-wallet\" react-scripts start",
-    "build": "yarn link \"fuel-burner-wallet\" react-scripts build",
+    "start": "yarn link \"fuel-burner-wallet\" && react-scripts start",
+    "build": "yarn link \"fuel-burner-wallet\" && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

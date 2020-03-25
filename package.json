@@ -6,7 +6,9 @@
   "author": "David Mihal <david@dmihal.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "cd wallet && yarn start"
   },
   "files": [
     "src",
