@@ -1,6 +1,6 @@
 {
   "name": "fuel-burner-wallet",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "David Mihal <david@dmihal.com>",
@@ -8,8 +8,13 @@
   "scripts": {
     "build": "tsc"
   },
+  "files": [
+    "src",
+    "dist"
+  ],
   "dependencies": {
     "@burner-wallet/assets": "^1.1.5",
+    "@burner-wallet/core": "^1.1.8",
     "fuel-core": "^0.1.0"
   },
   "devDependencies": {
