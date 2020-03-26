@@ -42,18 +42,6 @@ export default class FuelGateway extends Gateway {
       // sync first..
       await this.wallet.sync();
 
-      try {
-        const balanceCheck = await this.wallet
-          .balance(this.wallet.tokens.fakeDai);
-
-        // only faucet if it has no balance
-        if (balanceCheck.lte(0)) {
-          await this.wallet.faucet();
-        }
-      } catch (err) {
-        // leave emtpy
-      }
-
       // auto balance updates.. lol.
       await this.wallet.listen(async () => {
         console.log('updated');
@@ -101,6 +89,10 @@ export default class FuelGateway extends Gateway {
           to: result[2],
           timestamp: result[3],
         };
+
+      case 'faucet':
+        await wallet.faucet();
+        return;
 
       default:
         throw new Error(`[FuelGateway] Invalid action ${payload.action}`);

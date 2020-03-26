@@ -2,7 +2,7 @@
   "compilerOptions": {
     "lib": [
       "dom",
-      "dom.iterable",
+      "es6",
       "esnext"
     ],
     "module": "esnext",
@@ -19,7 +19,6 @@
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "jsx": "preserve",
     "rootDir": "src",
     "outDir": "./dist"
   },

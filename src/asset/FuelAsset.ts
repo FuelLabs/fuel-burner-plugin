@@ -55,4 +55,12 @@ export default class FuelAsset extends Asset {
       account,
     });
   }
+
+  async faucet(account: string) {
+    // @ts-ignore
+    return await this.core.handleRequest(`${this.network}-fuel`, {
+      action: 'faucet',
+      account,
+    });
+  }
 }
