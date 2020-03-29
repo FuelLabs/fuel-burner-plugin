@@ -16,7 +16,7 @@ const ENSPanel: React.FC<PluginElementContext> = ({ defaultAccount, plugin, asse
   const lastRequested = parseInt(localStorage.getItem('fuel-faucet-date') || '0');
 
   const [loading, setLoading] = useState(false);
-  const [hidden, setHidden] = useState(!lastRequested || Date.now() - lastRequested > REQUEST_TIMEOUT);
+  const [hidden, setHidden] = useState(Date.now() - lastRequested < REQUEST_TIMEOUT);
   const _plugin = plugin as FuelPlugin;
 
   const request = async (asset: Asset) => {
