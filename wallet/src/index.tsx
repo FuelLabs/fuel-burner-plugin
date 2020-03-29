@@ -5,7 +5,7 @@ import { LocalSigner } from '@burner-wallet/core/signers';
 import { InfuraGateway } from '@burner-wallet/core/gateways';
 import Exchange, { Uniswap } from '@burner-wallet/exchange';
 import ModernUI from '@burner-wallet/modern-ui';
-import { FuelGateway, FuelAsset, FuelPlugin } from 'fuel-burner-wallet';
+import { FuelGateway, FuelAsset, FuelPlugin } from 'fuel-burner-plugin';
 
 const fuelFakeDai = new FuelAsset({
   id: 'fakeDai', 

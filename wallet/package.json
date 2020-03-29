@@ -12,15 +12,15 @@
     "@types/react": "*",
     "@types/react-dom": "16.8.4",
     "@types/react-router-dom": "^4.3.3",
-    "fuel-burner-wallet": "^0.1.0",
+    "fuel-burner-plugin": "^0.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^3.2.0",
     "typescript": "3.5.1"
   },
   "scripts": {
-    "start": "yarn link \"fuel-burner-wallet\" && react-scripts start",
-    "build": "yarn link \"fuel-burner-wallet\" && react-scripts build",
+    "start": "yarn link \"fuel-burner-plugin\" && react-scripts start",
+    "build": "yarn link \"fuel-burner-plugin\" && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
