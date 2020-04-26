@@ -1,6 +1,6 @@
 {
   "name": "fuel-burner-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "David Mihal <david@dmihal.com>",
@@ -18,9 +18,9 @@
     "@burner-wallet/assets": "^1.1.5",
     "@burner-wallet/core": "^1.1.8",
     "@burner-wallet/types": "^1.0.6",
-    "@types/styled-components": "^4.1.8",
+    "@types/styled-components": "4.1.8",
     "fuel-core": "^0.1.0",
-    "styled-components": "^4.2.0"
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
     "typescript": "^3.8.3"
