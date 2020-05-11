@@ -76,7 +76,7 @@ export default class FuelGateway extends Gateway {
         };
 
       case 'balance':
-        return (await wallet.balance(payload.address)).toHexString();
+        return (await wallet.balance(payload.address)).toString();
 
       case 'transaction':
         const result = fuel.utils.RLP.decode(await this.transactionDB
