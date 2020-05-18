@@ -10,7 +10,7 @@ export default class FuelGateway extends Gateway {
   }
 
   getNetworks() {
-    return ['3-fuel', '5-fuel'];
+    return ['3-fuel', '4-fuel', '5-fuel'];
   }
 
   async getWallet(network: string, account: string) {

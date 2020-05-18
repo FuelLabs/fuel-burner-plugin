@@ -2520,10 +2520,10 @@ ftp@~0.3.10:
     readable-stream "1.1.x"
     xregexp "2.0.0"
 
-fuel-core@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/fuel-core/-/fuel-core-0.1.0.tgz#d50430a7dda3a613bf1c210b05058e49aa7a8b74"
-  integrity sha512-6fePddxJG4pgv5cq1KJ3FLvPa3soYs/8c9UxWKx8GSfDE+vloQ7yfwMBHWg2pxDIxqih9hVe9wDLTYZIZOy0bA==
+fuel-core@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/fuel-core/-/fuel-core-0.1.2.tgz#32b834d301174bc67bf909de3d701684b346c6c4"
+  integrity sha512-uN0L7jZtJrmq/vz+TlYD3M6ak2N93xLVQcBLapJgA5K4nAVLggUMG86WzybLuSFwgEA3HoQdfnLYXcXTPwmwvA==
   dependencies:
     axios "^0.19.1"
     bn.js "^5.1.1"
