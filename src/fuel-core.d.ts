@@ -22,6 +22,7 @@ declare module 'fuel-core' { 
   class Level {}
 
   export const dbs: { Index: Index, Memory: Memory, Level: Level };
+  export const providers: any;
 } 
 
 /*

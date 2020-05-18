@@ -33,7 +33,7 @@ export default class FuelGateway extends Gateway {
       this.wallet = new fuel.Wallet({
         signer: new fuel.utils.SigningKey(privateKey),
         chainId: network,
-        provider,
+        provider: new fuel.providers.Web3Provider(provider),
       });
 
       // @ts-ignore
