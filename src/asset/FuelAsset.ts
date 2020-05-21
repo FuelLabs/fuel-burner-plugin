@@ -1,7 +1,7 @@
 import { Asset } from '@burner-wallet/assets';
 
 export default class FuelAsset extends Asset {
-  private address: string;
+  public address: string;
 
   constructor({
     address='0x0000000000000000000000000000000000000000',

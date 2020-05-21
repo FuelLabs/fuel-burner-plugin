@@ -90,6 +90,14 @@ export default class FuelGateway extends Gateway {
           timestamp: result[3],
         };
 
+      case 'swap':
+        await wallet.swap(payload.amount, payload.inputToken, payload.outputToken);
+        return;
+
+      case 'rate':
+        const output = await wallet.rate(payload.amount, payload.inputToken, payload.outputToken);
+        return output.toString();
+
       case 'faucet':
         await wallet.faucet();
         return;
