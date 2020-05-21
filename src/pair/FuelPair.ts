@@ -46,7 +46,6 @@ export default class FuelPair extends Pair {
       outputToken: tokenB.address,
       amount: wad,
     });
-    console.log(estimate);
     return { estimate };
   }
 
@@ -61,7 +60,6 @@ export default class FuelPair extends Pair {
       outputToken: tokenA.address,
       amount: wad,
     });
-    console.log(estimate);
     return { estimate };
   }
 
