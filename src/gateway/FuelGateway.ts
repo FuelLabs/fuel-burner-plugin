@@ -5,10 +5,22 @@ interface FuelGatewayOptions {
   forceFuelNetwork?: string;
 }
 
+interface Transaction {
+  transactionHash: string;
+  txHash: string;
+  network: string;
+  from: string;
+  to: string;
+  address: string;
+  value: string;
+  timestamp: number;
+}
+
 export default class FuelGateway extends Gateway {
   private wallet: any;
   private transactionDB: any;
   private forceFuelNetwork?: string;
+  private transactions: Transaction[] = [];
 
   constructor(options: FuelGatewayOptions = {}) {
     super();
@@ -58,34 +70,33 @@ export default class FuelGateway extends Gateway {
       case 'transfer':
         const tx = this.transfer({
           network: _network,
-          from: payload.account,
+          from: payload.from,
           to: payload.to,
           asset: payload.address,
           value: payload.value,
         });
 
-        return {
-          transactionHash: '0x',
-          txHash: '0x',
-          // id: transferData.unsignedTransaction.hash,
-          // transactionHash: transferData.unsignedTransaction.hash,
-          // txHash: transferData.unsignedTransaction.hash,
+        const transaction: Transaction = {
+          transactionHash: this.transactions.length.toString(),
+          txHash: this.transactions.length.toString(),
+          network: _network,
+          from: payload.from,
+          to: payload.to,
+          address: payload.address,
+          value: payload.value,
+          timestamp: Date.now() / 1000,
         };
+
+        this.transactions.push(transaction);
+
+        return transaction;
 
       case 'balance':
         return this.getBalance(_network, payload.account, payload.address);
 
-      // case 'transaction':
-      //   const result = fuel.utils.RLP.decode(await this.transactionDB
-      //     .get('0xaaaa' + payload.transactionHash.slice(2)));
-
-      //   return {
-      //     from: wallet.address,
-      //     value: result[0],
-      //     address: result[1],
-      //     to: result[2],
-      //     timestamp: result[3],
-      //   };
+      case 'transaction':
+        const id = parseInt(payload.transactionHash);
+        return this.transactions[id] || null;
 
       // case 'swap':
       //   await wallet.swap(payload.amount, payload.inputToken, payload.outputToken);
