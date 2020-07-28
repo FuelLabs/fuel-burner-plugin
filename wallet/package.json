@@ -5,14 +5,14 @@
   "private": true,
   "dependencies": {
     "@burner-wallet/assets": "^1.1.0",
-    "@burner-wallet/core": "^1.1.0",
-    "@burner-wallet/exchange": "^1.0.0",
+    "@burner-wallet/core": "^1.1.11",
+    "@burner-wallet/exchange": "^1.1.4",
     "@burner-wallet/modern-ui": "^1.0.0",
     "@types/node": "12.0.4",
     "@types/react": "*",
     "@types/react-dom": "16.8.4",
     "@types/react-router-dom": "^4.3.3",
-    "fuel-burner-plugin": "^0.1.0",
+    "fuel-burner-plugin": "^0.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^3.2.0",
@@ -36,5 +36,8 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "resolutions": {
+    "web3": "1.2.11"
+  }
 }

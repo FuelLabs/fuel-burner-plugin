@@ -11,14 +11,14 @@ const fuelFakeDai = new FuelAsset({
   id: 'fakeDai', 
   name: 'Fuel FakeDai', 
   network: '5', 
-  address: '0xCF852d1295fD158D43D58ceD47F88f4f4ab0931C', 
+  address: '0xfed4976b61517a687d866ef4357a67bb89474002', 
   icon: 'https://static.burnerfactory.com/icons/mcd.svg', 
 });
 
 const core = new BurnerCore({
   signers: [new LocalSigner()],
   gateways: [
-    new FuelGateway(),
+    new FuelGateway({ forceFuelNetwork: 'unspecified' }),
     new InfuraGateway(process.env.REACT_APP_INFURA_KEY),
   ],
   assets: [fuelFakeDai],
