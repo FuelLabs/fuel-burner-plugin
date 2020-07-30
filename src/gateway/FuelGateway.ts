@@ -119,7 +119,10 @@ export default class FuelGateway extends Gateway {
   async getBalance(network: string, account: string, asset: string) {
     let wallet = this.wallet;
     if (!wallet || wallet.address !== account) {
-      wallet = new Wallet(null, { address: account });
+      wallet = new Wallet(null, {
+        address: account,
+        network: this.forceFuelNetwork || network,
+      });
     }
 
     const balance = await wallet.balance(asset);
