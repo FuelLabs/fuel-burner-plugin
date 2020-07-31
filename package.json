@@ -19,7 +19,7 @@
     "@burner-wallet/core": "^1.1.8",
     "@burner-wallet/exchange": "^1.0.0",
     "@burner-wallet/types": "^1.0.6",
-    "@fuel-js/wallet": "^0.2.6",
+    "@fuel-js/wallet": "^0.3.8",
     "@types/styled-components": "4.1.8",
     "styled-components": "^5.1.0"
   },

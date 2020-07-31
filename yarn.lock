@@ -338,6 +338,11 @@
     encoding-down "^6.3.0"
     levelup "^4.4.0"
 
+"@fuel-js/deployments@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@fuel-js/deployments/-/deployments-0.1.2.tgz#951ab42c2260659d8fba717152e3293c60fe78d4"
+  integrity sha512-yMqvVXSnPpS7YTFfZnFN75UNxxG1tzRJ1NXMH/mD0SNFcUe2qEODuphaGlrYOexfq3h7oPQ7gWS6MXk8BHpfDQ==
+
 "@fuel-js/encoding@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@fuel-js/encoding/-/encoding-0.1.0.tgz#ab58f0b17186c3621f2745b7b9363ac21511a63a"
@@ -345,7 +350,7 @@
   dependencies:
     "@fuel-js/utils" "^0.1.0"
 
-"@fuel-js/interface@^0.0.9":
+"@fuel-js/interface@0.0.9":
   version "0.0.9"
   resolved "https://registry.yarnpkg.com/@fuel-js/interface/-/interface-0.0.9.tgz#078cec3634617ac86f5b9644f65abba150e292de"
   integrity sha512-fNFhiqpiILZwvOddyIMVIdVKlv/kRmnMeGjf8QXkJrJetCA4zBLgdkQP3MGwKgG2O/M9+TO4eqrYajdzE3qqdA==
@@ -360,10 +365,10 @@
     "@fuel-js/rolled" "^0.1.0"
     "@fuel-js/utils" "^0.1.0"
 
-"@fuel-js/protocol@^0.2.5":
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@fuel-js/protocol/-/protocol-0.2.6.tgz#3fea2fe78b73d77d57da21289092212e70c0beac"
-  integrity sha512-+RWJn37g0RQC0XoBrJglOg1qMvwh/53EpZyEIu62yr/fDqLyBzdYMJMkCZM5CNJ5G3HIleq/R3zpci2E98pCXA==
+"@fuel-js/protocol@^0.2.6":
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/@fuel-js/protocol/-/protocol-0.2.8.tgz#0652ff5ba71fa6e57dbfd4cea0701c5101e22065"
+  integrity sha512-EA8ts1v8zQfhCmN/+2qig4VhChO8Frh+plqBSZDtkoNLzp3ny/s7WUG5H+kS007s6PbZ5dV8Qf1z46nuBJwDHg==
   dependencies:
     "@fuel-js/struct" "^0.1.6"
     "@fuel-js/utils" "^0.1.1"
@@ -406,16 +411,25 @@
     bn.js "^5.1.1"
     ethers "^4.0.47"
 
-"@fuel-js/wallet@^0.2.6":
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@fuel-js/wallet/-/wallet-0.2.6.tgz#5ce846ec854c28b553b0cf6d631404b289c3ad2a"
-  integrity sha512-2VKiQmQPwBOT0ObNXo+smeFz/2+CQ4gWTxjyM1WzAxC1gzUWJo9T13t/Z3L8aYeWkTqaQFTBTxwiN1nbsLUmtg==
+"@fuel-js/utils@^0.1.2":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@fuel-js/utils/-/utils-0.1.3.tgz#c1551ecfd117ae407d0d42fde5f6d572dcb3c509"
+  integrity sha512-XFG2LlSEFu8wEC5qdWSFpBtRW3Q9XmlNsAubwt9+7J966rTUbZQK1iir/9l2gJQNelpnvb0BEHCIPTIGt8dj3w==
+  dependencies:
+    bn.js "^5.1.1"
+    ethers "^4.0.47"
+
+"@fuel-js/wallet@^0.3.8":
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/@fuel-js/wallet/-/wallet-0.3.8.tgz#b32423b26563166b1002aee7cbbf8752ba276166"
+  integrity sha512-Imt6kiF6U/3C4vWE2N42mLz7YIfAQzApbtZbr4skvCNlHGV9I33ZKQhn74NRCnlVYV9E1cz2RJXutiGkhlSRdg==
   dependencies:
     "@fuel-js/database" "^0.1.0"
-    "@fuel-js/interface" "^0.0.9"
-    "@fuel-js/protocol" "^0.2.5"
+    "@fuel-js/deployments" "^0.1.2"
+    "@fuel-js/interface" "0.0.9"
+    "@fuel-js/protocol" "^0.2.6"
     "@fuel-js/struct" "^0.1.5"
-    "@fuel-js/utils" "^0.1.1"
+    "@fuel-js/utils" "^0.1.2"
     bn.js "^5.1.1"
     ethers "^4.0.47"
     memdown "^5.1.0"
@@ -7637,9 +7651,9 @@ web3-provider-engine@^15.0.12:
     xhr "^2.2.0"
     xtend "^4.0.1"
 
-"web3-provider-engine@git+https://github.com/trufflesuite/provider-engine.git#web3-one":
+"web3-provider-engine@https://github.com/trufflesuite/provider-engine#web3-one":
   version "14.0.6"
-  resolved "git+https://github.com/trufflesuite/provider-engine.git#9694f5b4e5500651bd2ff689df8529bb5cf6b96f"
+  resolved "https://github.com/trufflesuite/provider-engine#9694f5b4e5500651bd2ff689df8529bb5cf6b96f"
   dependencies:
     async "^2.5.0"
     backoff "^2.5.0"
